@@ -18,7 +18,7 @@ yes | cp -rf docker/metabase/Dockerfile $MB_SRC_FOLDER
 yes | cp -rf docker/metabase/bin/docker/* $MB_SRC_FOLDER/bin/docker
 
 # Build the Metabase Ubuntu based docker image
-docker build -t $MB_IMAGE_NAME -f $MB_SRC_FOLDER/Dockerfile .
+docker build -t $MB_IMAGE_NAME -f $MB_SRC_FOLDER/Dockerfile $MB_SRC_FOLDER
 
 # Build the Metabase image with DuckDB plugin
 docker build -t $MB_DUCKDB_IMAGE_NAME -f docker/Dockerfile .
